@@ -144,15 +144,20 @@ FILE * openFileWrite(char *fileName){
 }
 
 /**
- * zapisuje plik z serwera
+ * zapisuje plik od klienta
  * @param buffer
  * @param file
  */
-void saveFileFromServer(char * buffer, FILE * file){
-    fputs(buffer, file);
-    bzero(buffer, sizeof(buffer));
+void saveFileFromClient(char * buffer, FILE * file){
+    if (strcmp(buffer,"NOT_EXISTS") == 0){
+        printf("File not exists!\n");
+    } else {
+        fputs(buffer, file);
+        bzero(buffer, sizeof(buffer));
+        printf("Downloaded file successful\n");
+    }
+
     fclose(file);
-    printf("Downloaded file successful\n");
 }
 
 #endif //BEZPIECZNE_PRZESYLANIE_PLIKOW_FILE_TRANSPORT_H

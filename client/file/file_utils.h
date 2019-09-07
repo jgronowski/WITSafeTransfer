@@ -68,10 +68,14 @@ FILE * openFileWrite(char *fileName){
  * @param file
  */
 void saveFileFromServer(char * buffer, FILE * file){
-    fputs(buffer, file);
-    bzero(buffer, sizeof(buffer));
+    if (strcmp(buffer,"NOT_EXISTS") == 0){
+        printf("File not exists!\n");
+    } else {
+        fputs(buffer, file);
+        bzero(buffer, sizeof(buffer));
+        printf("Downloaded file successful\n");
+    }
     fclose(file);
-    printf("Downloaded file successful\n");
 }
 
 /**
@@ -155,7 +159,7 @@ FILE * openFileRead(char *fileName){
     if (file == NULL)
     {
         fprintf(stderr, "Could not open file for reading!\n");
-        exit(1);
+        return NULL;
     }
 
     return file;
@@ -171,6 +175,9 @@ char * getFileBuffToSend(char *fileName){
     memset(buffer,'\0',sizeof(buffer));
 
     FILE* file = openFileRead(fileName);
+    if (file == NULL){
+        return "NOT_EXISTS";
+    }
     fd = fileno(file);
     read(fd, buffer, sizeof(buffer));
 

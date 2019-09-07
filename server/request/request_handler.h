@@ -55,7 +55,7 @@ void downloadFileFromClient(char * request, SSL *ssl){
         printf("recived: %s\n", buffer);
     }
 
-    saveFileFromServer(buffer, file);
+    saveFileFromClient(buffer, file);
 }
 
 /**
