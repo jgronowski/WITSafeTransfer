@@ -1,0 +1,78 @@
+\hypertarget{request__handler_8h}{}\section{Dokumentacja pliku /home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/server/request/request\+\_\+handler.h}
+\label{request__handler_8h}\index{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/server/request/request\+\_\+handler.\+h@{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/server/request/request\+\_\+handler.\+h}}
+
+
+przetwarzanie żądania clienta  
+
+
+{\ttfamily \#include \char`\"{}../file/file\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{request__handler_8h_a2d98c467504fd8e996b4c5526f125479}{download\+File\+From\+Client} (char $\ast$request, S\+SL $\ast$ssl)
+\item 
+void \hyperlink{request__handler_8h_a4d593cce689467f33c237f5a66bf26a8}{send\+File\+To\+Client} (char $\ast$file\+Name, S\+SL $\ast$ssl)
+\item 
+void \hyperlink{request__handler_8h_aa91785aa782893698262b7c6396e5be8}{handle\+Request} (char $\ast$request, S\+SL $\ast$ssl)
+\end{DoxyCompactItemize}
+\subsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{request__handler_8h_ae45921aa5bdaa29767e111bf518d91f5}{S\+E\+ND} = \char`\"{}send\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+przetwarzanie żądania clienta 
+
+tutaj przetwarzamt żądanie clienta i pobieramy / wysyłamy pliki w zależności od żądania 
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{request__handler_8h_a2d98c467504fd8e996b4c5526f125479}\label{request__handler_8h_a2d98c467504fd8e996b4c5526f125479}} 
+\index{request\+\_\+handler.\+h@{request\+\_\+handler.\+h}!download\+File\+From\+Client@{download\+File\+From\+Client}}
+\index{download\+File\+From\+Client@{download\+File\+From\+Client}!request\+\_\+handler.\+h@{request\+\_\+handler.\+h}}
+\subsubsection{\texorpdfstring{download\+File\+From\+Client()}{downloadFileFromClient()}}
+{\footnotesize\ttfamily void download\+File\+From\+Client (\begin{DoxyParamCaption}\item[{char $\ast$}]{request,  }\item[{S\+SL $\ast$}]{ssl }\end{DoxyParamCaption})}
+
+pobiera plik od klienta 
+\begin{DoxyParams}{Parametry}
+{\em request} & \\
+\hline
+{\em ssl} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{request__handler_8h_aa91785aa782893698262b7c6396e5be8}\label{request__handler_8h_aa91785aa782893698262b7c6396e5be8}} 
+\index{request\+\_\+handler.\+h@{request\+\_\+handler.\+h}!handle\+Request@{handle\+Request}}
+\index{handle\+Request@{handle\+Request}!request\+\_\+handler.\+h@{request\+\_\+handler.\+h}}
+\subsubsection{\texorpdfstring{handle\+Request()}{handleRequest()}}
+{\footnotesize\ttfamily void handle\+Request (\begin{DoxyParamCaption}\item[{char $\ast$}]{request,  }\item[{S\+SL $\ast$}]{ssl }\end{DoxyParamCaption})}
+
+przetwarzanie żądania od klienta 
+\begin{DoxyParams}{Parametry}
+{\em request} & \\
+\hline
+{\em ssl} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{request__handler_8h_a4d593cce689467f33c237f5a66bf26a8}\label{request__handler_8h_a4d593cce689467f33c237f5a66bf26a8}} 
+\index{request\+\_\+handler.\+h@{request\+\_\+handler.\+h}!send\+File\+To\+Client@{send\+File\+To\+Client}}
+\index{send\+File\+To\+Client@{send\+File\+To\+Client}!request\+\_\+handler.\+h@{request\+\_\+handler.\+h}}
+\subsubsection{\texorpdfstring{send\+File\+To\+Client()}{sendFileToClient()}}
+{\footnotesize\ttfamily void send\+File\+To\+Client (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{S\+SL $\ast$}]{ssl }\end{DoxyParamCaption})}
+
+wysyła plik do klienta 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+{\em ssl} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{request__handler_8h_ae45921aa5bdaa29767e111bf518d91f5}\label{request__handler_8h_ae45921aa5bdaa29767e111bf518d91f5}} 
+\index{request\+\_\+handler.\+h@{request\+\_\+handler.\+h}!S\+E\+ND@{S\+E\+ND}}
+\index{S\+E\+ND@{S\+E\+ND}!request\+\_\+handler.\+h@{request\+\_\+handler.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+ND}{SEND}}
+{\footnotesize\ttfamily char$\ast$ S\+E\+ND = \char`\"{}send\char`\"{}}
+

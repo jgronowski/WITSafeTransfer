@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WIT Safe Transfer: Plik źródłowy /home/jgronowski/Dokumenty/Projekty/WITSafeTransfer/server/request/request_handler.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo-WIT.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WIT Safe Transfer
+   &#160;<span id="projectnumber">ver 1.00</span>
+   </div>
+   <div id="projectbrief">Sylwia Dziedzic, Jaroslaw Gronowski</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_fbc12fbbeda88092239a2e3fe4ec2966.html">request</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">request_handler.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="request__handler_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BEZPIECZNE_PRZESYLANIE_PLIKOW_REQUEST_HANDLER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BEZPIECZNE_PRZESYLANIE_PLIKOW_REQUEST_HANDLER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../file/file_utils.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="request__handler_8h.html#ae45921aa5bdaa29767e111bf518d91f5">   13</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="request__handler_8h.html#ae45921aa5bdaa29767e111bf518d91f5">SEND</a> = <span class="stringliteral">&quot;send&quot;</span>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="request__handler_8h.html#a2d98c467504fd8e996b4c5526f125479">downloadFileFromClient</a>(<span class="keywordtype">char</span> * request, SSL *ssl);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="request__handler_8h.html#a4d593cce689467f33c237f5a66bf26a8">sendFileToClient</a>(<span class="keywordtype">char</span> * <a class="code" href="struct_action.html#a16afd82f3df65ea705548e5977cce155">fileName</a>, SSL *ssl);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="request__handler_8h.html#aa91785aa782893698262b7c6396e5be8">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="request__handler_8h.html#aa91785aa782893698262b7c6396e5be8">handleRequest</a>(<span class="keywordtype">char</span> * request, SSL *ssl){</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">char</span> requestType[4];</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    strncpy(requestType,request, 4);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    printf(<span class="stringliteral">&quot;request: %s\n&quot;</span>, request);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (strcmp(requestType, <a class="code" href="request__handler_8h.html#ae45921aa5bdaa29767e111bf518d91f5">SEND</a>) == 0 ){</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="request__handler_8h.html#a2d98c467504fd8e996b4c5526f125479">downloadFileFromClient</a>(request, ssl);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="request__handler_8h.html#a4d593cce689467f33c237f5a66bf26a8">sendFileToClient</a>(request, ssl);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="request__handler_8h.html#a2d98c467504fd8e996b4c5526f125479">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="request__handler_8h.html#a2d98c467504fd8e996b4c5526f125479">downloadFileFromClient</a>(<span class="keywordtype">char</span> * request, SSL *ssl){</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    printf(<span class="stringliteral">&quot;Downloading file from client\n&quot;</span>);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">char</span> *filePath = <a class="code" href="client_2file_2file__utils_8h.html#ac17d92f9030fd5ceeb090ec0ea3ea7b4">getDownloadFilePath</a>(request);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    FILE * file = <a class="code" href="client_2file_2file__utils_8h.html#ac4fb1f2d5b70c3163da6dc1a6ac908f9">openFileWrite</a>(filePath);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//reading response from server</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">char</span> buffer[9000];</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> read = 0, error = 0;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    memset(buffer,<span class="charliteral">&#39;\0&#39;</span>,<span class="keyword">sizeof</span>(buffer));</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span>(read = 0; read &lt; <span class="keyword">sizeof</span>(buffer) + read; <span class="keyword">sizeof</span>(buffer) - read){</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        error = SSL_read(ssl, buffer + read, <span class="keyword">sizeof</span>(buffer) - read);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (error &lt;= 0)</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        printf(<span class="stringliteral">&quot;recived: %s\n&quot;</span>, buffer);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="client_2file_2file__utils_8h.html#a0be3b5854d7583031a87d8338abee79c">saveFileFromServer</a>(buffer, file);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="request__handler_8h.html#a4d593cce689467f33c237f5a66bf26a8">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="request__handler_8h.html#a4d593cce689467f33c237f5a66bf26a8">sendFileToClient</a>(<span class="keywordtype">char</span> * <a class="code" href="struct_action.html#a16afd82f3df65ea705548e5977cce155">fileName</a>, SSL *ssl){</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">char</span> * fileBuffToSend = <a class="code" href="client_2file_2file__utils_8h.html#a8f1e90a63f277bca0f0442a6da7bcb40">getFileBuffToSend</a>(fileName);</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//sending response from server</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> wrote = 0, error = 0;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span>(wrote = 0; wrote &lt;strlen(fileBuffToSend); wrote += error){</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        printf(<span class="stringliteral">&quot;sending: %s\n&quot;</span>, fileBuffToSend);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        error = SSL_write(ssl, fileBuffToSend+wrote, (<span class="keywordtype">int</span>) (strlen(fileBuffToSend) - wrote));</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span>(error &lt;= 0)</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif //BEZPIECZNE_PRZESYLANIE_PLIKOW_REQUEST_HANDLER_H</span></div><div class="ttc" id="client_2file_2file__utils_8h_html_a8f1e90a63f277bca0f0442a6da7bcb40"><div class="ttname"><a href="client_2file_2file__utils_8h.html#a8f1e90a63f277bca0f0442a6da7bcb40">getFileBuffToSend</a></div><div class="ttdeci">char * getFileBuffToSend(char *fileName)</div><div class="ttdef"><b>Definition:</b> file_utils.h:168</div></div>
+<div class="ttc" id="request__handler_8h_html_ae45921aa5bdaa29767e111bf518d91f5"><div class="ttname"><a href="request__handler_8h.html#ae45921aa5bdaa29767e111bf518d91f5">SEND</a></div><div class="ttdeci">char * SEND</div><div class="ttdef"><b>Definition:</b> request_handler.h:13</div></div>
+<div class="ttc" id="client_2file_2file__utils_8h_html_ac4fb1f2d5b70c3163da6dc1a6ac908f9"><div class="ttname"><a href="client_2file_2file__utils_8h.html#ac4fb1f2d5b70c3163da6dc1a6ac908f9">openFileWrite</a></div><div class="ttdeci">FILE * openFileWrite(char *fileName)</div><div class="ttdef"><b>Definition:</b> file_utils.h:52</div></div>
+<div class="ttc" id="client_2file_2file__utils_8h_html_ac17d92f9030fd5ceeb090ec0ea3ea7b4"><div class="ttname"><a href="client_2file_2file__utils_8h.html#ac17d92f9030fd5ceeb090ec0ea3ea7b4">getDownloadFilePath</a></div><div class="ttdeci">char * getDownloadFilePath(char *fileName)</div><div class="ttdef"><b>Definition:</b> file_utils.h:19</div></div>
+<div class="ttc" id="client_2file_2file__utils_8h_html_a0be3b5854d7583031a87d8338abee79c"><div class="ttname"><a href="client_2file_2file__utils_8h.html#a0be3b5854d7583031a87d8338abee79c">saveFileFromServer</a></div><div class="ttdeci">void saveFileFromServer(char *buffer, FILE *file)</div><div class="ttdef"><b>Definition:</b> file_utils.h:70</div></div>
+<div class="ttc" id="struct_action_html_a16afd82f3df65ea705548e5977cce155"><div class="ttname"><a href="struct_action.html#a16afd82f3df65ea705548e5977cce155">Action::fileName</a></div><div class="ttdeci">char fileName[200]</div><div class="ttdef"><b>Definition:</b> actions.h:19</div></div>
+<div class="ttc" id="request__handler_8h_html_a4d593cce689467f33c237f5a66bf26a8"><div class="ttname"><a href="request__handler_8h.html#a4d593cce689467f33c237f5a66bf26a8">sendFileToClient</a></div><div class="ttdeci">void sendFileToClient(char *fileName, SSL *ssl)</div><div class="ttdef"><b>Definition:</b> request_handler.h:66</div></div>
+<div class="ttc" id="request__handler_8h_html_aa91785aa782893698262b7c6396e5be8"><div class="ttname"><a href="request__handler_8h.html#aa91785aa782893698262b7c6396e5be8">handleRequest</a></div><div class="ttdeci">void handleRequest(char *request, SSL *ssl)</div><div class="ttdef"><b>Definition:</b> request_handler.h:23</div></div>
+<div class="ttc" id="request__handler_8h_html_a2d98c467504fd8e996b4c5526f125479"><div class="ttname"><a href="request__handler_8h.html#a2d98c467504fd8e996b4c5526f125479">downloadFileFromClient</a></div><div class="ttdeci">void downloadFileFromClient(char *request, SSL *ssl)</div><div class="ttdef"><b>Definition:</b> request_handler.h:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

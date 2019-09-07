@@ -1,0 +1,76 @@
+\hypertarget{ssl__client_8h}{}\section{Dokumentacja pliku /home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/tcp\+\_\+openssl/ssl\+\_\+client.h}
+\label{ssl__client_8h}\index{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/tcp\+\_\+openssl/ssl\+\_\+client.\+h@{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/tcp\+\_\+openssl/ssl\+\_\+client.\+h}}
+
+
+połączenie openssl klienta  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/ssl.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/err.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../action/actions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../file/file\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ssl__client_8h_a525c96a75558748d296016ac6b0c86f6}{start\+Open\+S\+S\+L\+Client} (int port)
+\item 
+S\+S\+L\+\_\+\+C\+TX $\ast$ \hyperlink{ssl__client_8h_ae8fb4850e49e5e4c234bc95baa357f58}{create\+S\+S\+L\+Client\+Method\+And\+Ctx} (const S\+S\+L\+\_\+\+M\+E\+T\+H\+OD $\ast$ssl\+Method)
+\item 
+void \hyperlink{ssl__client_8h_a61a468f03fa158a6334c696942cd6aa0}{start\+Client} (struct sockaddr\+\_\+in server\+Address, S\+S\+L\+\_\+\+C\+TX $\ast$ssl\+Ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+połączenie openssl klienta 
+
+tu jest tworzone połączenie openssl z serwererm gdzie określamy metode kryptograficzną taką samą jak na serwerze 
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{ssl__client_8h_ae8fb4850e49e5e4c234bc95baa357f58}\label{ssl__client_8h_ae8fb4850e49e5e4c234bc95baa357f58}} 
+\index{ssl\+\_\+client.\+h@{ssl\+\_\+client.\+h}!create\+S\+S\+L\+Client\+Method\+And\+Ctx@{create\+S\+S\+L\+Client\+Method\+And\+Ctx}}
+\index{create\+S\+S\+L\+Client\+Method\+And\+Ctx@{create\+S\+S\+L\+Client\+Method\+And\+Ctx}!ssl\+\_\+client.\+h@{ssl\+\_\+client.\+h}}
+\subsubsection{\texorpdfstring{create\+S\+S\+L\+Client\+Method\+And\+Ctx()}{createSSLClientMethodAndCtx()}}
+{\footnotesize\ttfamily S\+S\+L\+\_\+\+C\+TX $\ast$ create\+S\+S\+L\+Client\+Method\+And\+Ctx (\begin{DoxyParamCaption}\item[{const S\+S\+L\+\_\+\+M\+E\+T\+H\+OD $\ast$}]{ssl\+Method }\end{DoxyParamCaption})}
+
+tworzenie S\+S\+L\+\_\+\+M\+E\+T\+H\+OD i S\+S\+L\+\_\+\+C\+TX 
+\begin{DoxyParams}{Parametry}
+{\em ssl\+Method} & \\
+\hline
+{\em ssl\+Ctx} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__client_8h_a61a468f03fa158a6334c696942cd6aa0}\label{ssl__client_8h_a61a468f03fa158a6334c696942cd6aa0}} 
+\index{ssl\+\_\+client.\+h@{ssl\+\_\+client.\+h}!start\+Client@{start\+Client}}
+\index{start\+Client@{start\+Client}!ssl\+\_\+client.\+h@{ssl\+\_\+client.\+h}}
+\subsubsection{\texorpdfstring{start\+Client()}{startClient()}}
+{\footnotesize\ttfamily void start\+Client (\begin{DoxyParamCaption}\item[{struct sockaddr\+\_\+in}]{server\+Address,  }\item[{S\+S\+L\+\_\+\+C\+TX $\ast$}]{ssl\+Ctx }\end{DoxyParamCaption})}
+
+czekamy na polecenie od użytkownika i wysyłam do serwera żądanie 
+\begin{DoxyParams}{Parametry}
+{\em client\+Socket} & \\
+\hline
+{\em server\+Address} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__client_8h_a525c96a75558748d296016ac6b0c86f6}\label{ssl__client_8h_a525c96a75558748d296016ac6b0c86f6}} 
+\index{ssl\+\_\+client.\+h@{ssl\+\_\+client.\+h}!start\+Open\+S\+S\+L\+Client@{start\+Open\+S\+S\+L\+Client}}
+\index{start\+Open\+S\+S\+L\+Client@{start\+Open\+S\+S\+L\+Client}!ssl\+\_\+client.\+h@{ssl\+\_\+client.\+h}}
+\subsubsection{\texorpdfstring{start\+Open\+S\+S\+L\+Client()}{startOpenSSLClient()}}
+{\footnotesize\ttfamily void start\+Open\+S\+S\+L\+Client (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+utworzenie openssl klienta 
+\begin{DoxyParams}{Parametry}
+{\em port} & domyślnie 8080 \\
+\hline
+\end{DoxyParams}

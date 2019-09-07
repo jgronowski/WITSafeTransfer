@@ -1,0 +1,88 @@
+\hypertarget{ssl__server_8h}{}\section{Dokumentacja pliku /home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/server/tcp\+\_\+openssl/ssl\+\_\+server.h}
+\label{ssl__server_8h}\index{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/server/tcp\+\_\+openssl/ssl\+\_\+server.\+h@{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/server/tcp\+\_\+openssl/ssl\+\_\+server.\+h}}
+
+
+połączenie openssl serwera  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/ssl.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/err.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/rsa.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../file/file\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../request/request\+\_\+handler.\+h\char`\"{}}\newline
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ssl__server_8h_aac2f81af1e8780a7f43b84b1486d0d41}{start\+Open\+S\+S\+L\+Server} (int port)
+\item 
+S\+S\+L\+\_\+\+C\+TX $\ast$ \hyperlink{ssl__server_8h_a12cc23f618b9d2c518dca933493d9348}{create\+S\+S\+L\+Server\+Method\+And\+Ctx} (const S\+S\+L\+\_\+\+M\+E\+T\+H\+OD $\ast$ssl\+Method)
+\item 
+void \hyperlink{ssl__server_8h_a9e08e469a0aefb84109e2dbd03c4d007}{listen\+And\+Serve} (int server\+Socket, S\+S\+L\+\_\+\+C\+TX $\ast$ssl\+Ctx)
+\end{DoxyCompactItemize}
+\subsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{ssl__server_8h_ab35eb3c36c30bc69081c8150faa6aa94}{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT} = 8080
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+połączenie openssl serwera 
+
+tu jest tworzony serwer gdzie określamy metode kryptograficzną, dołączamy certyfikat openssl i czekamy na żądania klienta 
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{ssl__server_8h_a12cc23f618b9d2c518dca933493d9348}\label{ssl__server_8h_a12cc23f618b9d2c518dca933493d9348}} 
+\index{ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}!create\+S\+S\+L\+Server\+Method\+And\+Ctx@{create\+S\+S\+L\+Server\+Method\+And\+Ctx}}
+\index{create\+S\+S\+L\+Server\+Method\+And\+Ctx@{create\+S\+S\+L\+Server\+Method\+And\+Ctx}!ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}}
+\subsubsection{\texorpdfstring{create\+S\+S\+L\+Server\+Method\+And\+Ctx()}{createSSLServerMethodAndCtx()}}
+{\footnotesize\ttfamily S\+S\+L\+\_\+\+C\+TX $\ast$ create\+S\+S\+L\+Server\+Method\+And\+Ctx (\begin{DoxyParamCaption}\item[{const S\+S\+L\+\_\+\+M\+E\+T\+H\+OD $\ast$}]{ssl\+Method }\end{DoxyParamCaption})}
+
+tworzenie S\+S\+L\+\_\+\+M\+E\+T\+H\+OD i S\+S\+L\+\_\+\+C\+TX 
+\begin{DoxyParams}{Parametry}
+{\em ssl\+Method} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__server_8h_a9e08e469a0aefb84109e2dbd03c4d007}\label{ssl__server_8h_a9e08e469a0aefb84109e2dbd03c4d007}} 
+\index{ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}!listen\+And\+Serve@{listen\+And\+Serve}}
+\index{listen\+And\+Serve@{listen\+And\+Serve}!ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}}
+\subsubsection{\texorpdfstring{listen\+And\+Serve()}{listenAndServe()}}
+{\footnotesize\ttfamily void listen\+And\+Serve (\begin{DoxyParamCaption}\item[{int}]{server\+Socket,  }\item[{S\+S\+L\+\_\+\+C\+TX $\ast$}]{ssl\+Ctx }\end{DoxyParamCaption})}
+
+czekanie na żądania klienta i wysyłanie / pobieranie plików 
+\begin{DoxyParams}{Parametry}
+{\em server\+Socket} & \\
+\hline
+{\em ssl\+Ctx} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ssl__server_8h_aac2f81af1e8780a7f43b84b1486d0d41}\label{ssl__server_8h_aac2f81af1e8780a7f43b84b1486d0d41}} 
+\index{ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}!start\+Open\+S\+S\+L\+Server@{start\+Open\+S\+S\+L\+Server}}
+\index{start\+Open\+S\+S\+L\+Server@{start\+Open\+S\+S\+L\+Server}!ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}}
+\subsubsection{\texorpdfstring{start\+Open\+S\+S\+L\+Server()}{startOpenSSLServer()}}
+{\footnotesize\ttfamily void start\+Open\+S\+S\+L\+Server (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+utworzenie openssl serwer 
+\begin{DoxyParams}{Parametry}
+{\em port} & domyslnie 8080 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{ssl__server_8h_ab35eb3c36c30bc69081c8150faa6aa94}\label{ssl__server_8h_ab35eb3c36c30bc69081c8150faa6aa94}} 
+\index{ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}!S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT@{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT@{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}!ssl\+\_\+server.\+h@{ssl\+\_\+server.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}{SERVER\_PORT}}
+{\footnotesize\ttfamily const int S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT = 8080}
+

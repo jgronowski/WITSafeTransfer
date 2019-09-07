@@ -1,0 +1,125 @@
+\hypertarget{client_2file_2file__utils_8h}{}\section{Dokumentacja pliku /home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/file/file\+\_\+utils.h}
+\label{client_2file_2file__utils_8h}\index{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/file/file\+\_\+utils.\+h@{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/file/file\+\_\+utils.\+h}}
+
+
+zarządzanie plikami  
+
+
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{client_2file_2file__utils_8h_a6847499d68a15e19fbda38c03f6dec52}{get\+Resources\+File\+Path} (char $\ast$file\+Name)
+\item 
+char $\ast$ \hyperlink{client_2file_2file__utils_8h_ac17d92f9030fd5ceeb090ec0ea3ea7b4}{get\+Download\+File\+Path} (char $\ast$file\+Name)
+\item 
+F\+I\+LE $\ast$ \hyperlink{client_2file_2file__utils_8h_ac4fb1f2d5b70c3163da6dc1a6ac908f9}{open\+File\+Write} (char $\ast$file\+Name)
+\item 
+void \hyperlink{client_2file_2file__utils_8h_a0be3b5854d7583031a87d8338abee79c}{save\+File\+From\+Server} (char $\ast$buffer, F\+I\+LE $\ast$file)
+\item 
+bool \hyperlink{client_2file_2file__utils_8h_ad1027625f7156311abdae654c0293e7a}{file\+Exists} (char $\ast$file\+Name)
+\item 
+bool \hyperlink{client_2file_2file__utils_8h_aa6fae60446c06dad487f85502e224b2d}{is\+File\+Name\+OK} (char $\ast$file\+Name)
+\item 
+F\+I\+LE $\ast$ \hyperlink{client_2file_2file__utils_8h_a8f4f4586b7cd34bc5c5366d2979909d8}{open\+File\+Read} (char $\ast$file\+Name)
+\item 
+char $\ast$ \hyperlink{client_2file_2file__utils_8h_a8f1e90a63f277bca0f0442a6da7bcb40}{get\+File\+Buff\+To\+Send} (char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+zarządzanie plikami 
+
+wszystkie metody tutaj pomagają zarządzać plikami 
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_ad1027625f7156311abdae654c0293e7a}\label{client_2file_2file__utils_8h_ad1027625f7156311abdae654c0293e7a}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!file\+Exists@{file\+Exists}}
+\index{file\+Exists@{file\+Exists}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{file\+Exists()}{fileExists()}}
+{\footnotesize\ttfamily bool file\+Exists (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+sprawdza czy plik istnieje w /resources 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_ac17d92f9030fd5ceeb090ec0ea3ea7b4}\label{client_2file_2file__utils_8h_ac17d92f9030fd5ceeb090ec0ea3ea7b4}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!get\+Download\+File\+Path@{get\+Download\+File\+Path}}
+\index{get\+Download\+File\+Path@{get\+Download\+File\+Path}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{get\+Download\+File\+Path()}{getDownloadFilePath()}}
+{\footnotesize\ttfamily char$\ast$ get\+Download\+File\+Path (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+zwraca ścieżkę do pliku z folderu /downloads 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_a8f1e90a63f277bca0f0442a6da7bcb40}\label{client_2file_2file__utils_8h_a8f1e90a63f277bca0f0442a6da7bcb40}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!get\+File\+Buff\+To\+Send@{get\+File\+Buff\+To\+Send}}
+\index{get\+File\+Buff\+To\+Send@{get\+File\+Buff\+To\+Send}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{get\+File\+Buff\+To\+Send()}{getFileBuffToSend()}}
+{\footnotesize\ttfamily char$\ast$ get\+File\+Buff\+To\+Send (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+zwraca plik do wysłania 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_a6847499d68a15e19fbda38c03f6dec52}\label{client_2file_2file__utils_8h_a6847499d68a15e19fbda38c03f6dec52}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!get\+Resources\+File\+Path@{get\+Resources\+File\+Path}}
+\index{get\+Resources\+File\+Path@{get\+Resources\+File\+Path}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{get\+Resources\+File\+Path()}{getResourcesFilePath()}}
+{\footnotesize\ttfamily char $\ast$ get\+Resources\+File\+Path (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+zwraca ścieżkę do pliku z folderu /resources 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_aa6fae60446c06dad487f85502e224b2d}\label{client_2file_2file__utils_8h_aa6fae60446c06dad487f85502e224b2d}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!is\+File\+Name\+OK@{is\+File\+Name\+OK}}
+\index{is\+File\+Name\+OK@{is\+File\+Name\+OK}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{is\+File\+Name\+O\+K()}{isFileNameOK()}}
+{\footnotesize\ttfamily bool is\+File\+Name\+OK (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+sprawdza czy plik istnieje w /downloads 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_a8f4f4586b7cd34bc5c5366d2979909d8}\label{client_2file_2file__utils_8h_a8f4f4586b7cd34bc5c5366d2979909d8}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!open\+File\+Read@{open\+File\+Read}}
+\index{open\+File\+Read@{open\+File\+Read}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{open\+File\+Read()}{openFileRead()}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ open\+File\+Read (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+otwiera plik do pisania 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_ac4fb1f2d5b70c3163da6dc1a6ac908f9}\label{client_2file_2file__utils_8h_ac4fb1f2d5b70c3163da6dc1a6ac908f9}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!open\+File\+Write@{open\+File\+Write}}
+\index{open\+File\+Write@{open\+File\+Write}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{open\+File\+Write()}{openFileWrite()}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ open\+File\+Write (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+otwiera plik do czytania 
+\begin{DoxyParams}{Parametry}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{client_2file_2file__utils_8h_a0be3b5854d7583031a87d8338abee79c}\label{client_2file_2file__utils_8h_a0be3b5854d7583031a87d8338abee79c}} 
+\index{client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}!save\+File\+From\+Server@{save\+File\+From\+Server}}
+\index{save\+File\+From\+Server@{save\+File\+From\+Server}!client/file/file\+\_\+utils.\+h@{client/file/file\+\_\+utils.\+h}}
+\subsubsection{\texorpdfstring{save\+File\+From\+Server()}{saveFileFromServer()}}
+{\footnotesize\ttfamily void save\+File\+From\+Server (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+zapisuje plik z serwera 
+\begin{DoxyParams}{Parametry}
+{\em buffer} & \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}

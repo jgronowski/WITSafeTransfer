@@ -51,7 +51,7 @@ PROJECT_BRIEF          = "Sylwia Dziedzic, Jaroslaw Gronowski"
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = /home/jgronowski/Dokumenty/Projekty/WITSafeTransfer/Doxygen/images/Logo-WIT-Szkoła-Wyższa-www-red
+PROJECT_LOGO           = /home/jgronowski/Dokumenty/Projekty/WITSafeTransfer/Doxygen/images/Logo-WIT.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -873,7 +873,8 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = 
+EXCLUDE                = ../cmake-build-debug \
+                         .
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded

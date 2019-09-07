@@ -1,0 +1,24 @@
+\#\+T\+CP O\+P\+E\+N\+S\+SL connection Server and client secure tcp file transfer using openssl libraries
+
+N\+O\+TE\+: Before you run the code generate an openssl certificate by executing this command\+: 
+\begin{DoxyCode}
+cd ./server/certificate && openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out
+       mycert.pem
+\end{DoxyCode}
+
+
+\#\#\#\# run \& compile server 
+\begin{DoxyCode}
+gcc -o server ./server/main.c -lcrypto -lssl
+cd server && ./server <port>
+\end{DoxyCode}
+ if server throws error {\ttfamily Private key does not match certificate} try to write full path to {\ttfamily mycert.\+pem} in server/tcp\+\_\+openssl/tcp\+\_\+server.\+c
+
+\paragraph*{run \& compile client}
+
+
+\begin{DoxyCode}
+gcc -o client ./client/main.c -lcrypto -lssl
+cd client && ./client <port>
+\end{DoxyCode}
+ 

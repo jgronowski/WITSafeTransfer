@@ -1,0 +1,102 @@
+\hypertarget{actions_8h}{}\section{Dokumentacja pliku /home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/action/actions.h}
+\label{actions_8h}\index{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/action/actions.\+h@{/home/jgronowski/\+Dokumenty/\+Projekty/\+W\+I\+T\+Safe\+Transfer/client/action/actions.\+h}}
+
+
+akcje  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../file/file\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Struktury danych}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_action}{Action}
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{actions_8h_ad559836d89f130cd67a2a833265fb0f4}{check\+Action\+Type\+And\+File\+Name} (char $\ast$action, char $\ast$file\+Name, struct \hyperlink{struct_action}{Action} $\ast$new\+Action)
+\item 
+struct \hyperlink{struct_action}{Action} \hyperlink{actions_8h_ab779c1d8a563199f91109cfd210dcfa5}{get\+Action\+Type\+And\+File\+Name} ()
+\item 
+void \hyperlink{actions_8h_a72e465fc8fafe02c7c3c015ec2320a36}{send\+File\+To\+Server} (S\+SL $\ast$ssl, char $\ast$file\+Name)
+\item 
+void \hyperlink{actions_8h_ad195179f850e26677ae66c7085fe7135}{download\+File\+From\+Server} (S\+SL $\ast$ssl, char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{actions_8h_ae45921aa5bdaa29767e111bf518d91f5}{S\+E\+ND} = \char`\"{}send\char`\"{}
+\item 
+char $\ast$ \hyperlink{actions_8h_ac6101db2192cd8d50ac2d8e30d9712f5}{D\+O\+W\+N\+L\+O\+AD} = \char`\"{}download\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+akcje 
+
+client może wykonywać dwie akcje \char`\"{}downlaod\char`\"{} i \char`\"{}send\char`\"{}, tu znajdują się wszystkie metody które dotyczą tych akcji 
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{actions_8h_ad559836d89f130cd67a2a833265fb0f4}\label{actions_8h_ad559836d89f130cd67a2a833265fb0f4}} 
+\index{actions.\+h@{actions.\+h}!check\+Action\+Type\+And\+File\+Name@{check\+Action\+Type\+And\+File\+Name}}
+\index{check\+Action\+Type\+And\+File\+Name@{check\+Action\+Type\+And\+File\+Name}!actions.\+h@{actions.\+h}}
+\subsubsection{\texorpdfstring{check\+Action\+Type\+And\+File\+Name()}{checkActionTypeAndFileName()}}
+{\footnotesize\ttfamily bool check\+Action\+Type\+And\+File\+Name (\begin{DoxyParamCaption}\item[{char $\ast$}]{action,  }\item[{char $\ast$}]{file\+Name,  }\item[{struct \hyperlink{struct_action}{Action} $\ast$}]{new\+Action }\end{DoxyParamCaption})}
+
+sprawdzamy czy akcja ma dobrą wartość i czy nazwa pliku nie jest pusta 
+\begin{DoxyParams}{Parametry}
+{\em action} & \\
+\hline
+{\em file\+Name} & \\
+\hline
+{\em new\+Action} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{actions_8h_ad195179f850e26677ae66c7085fe7135}\label{actions_8h_ad195179f850e26677ae66c7085fe7135}} 
+\index{actions.\+h@{actions.\+h}!download\+File\+From\+Server@{download\+File\+From\+Server}}
+\index{download\+File\+From\+Server@{download\+File\+From\+Server}!actions.\+h@{actions.\+h}}
+\subsubsection{\texorpdfstring{download\+File\+From\+Server()}{downloadFileFromServer()}}
+{\footnotesize\ttfamily void download\+File\+From\+Server (\begin{DoxyParamCaption}\item[{S\+SL $\ast$}]{ssl,  }\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+pobieranie pliku z serwera 
+\begin{DoxyParams}{Parametry}
+{\em ssl} & \\
+\hline
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{actions_8h_ab779c1d8a563199f91109cfd210dcfa5}\label{actions_8h_ab779c1d8a563199f91109cfd210dcfa5}} 
+\index{actions.\+h@{actions.\+h}!get\+Action\+Type\+And\+File\+Name@{get\+Action\+Type\+And\+File\+Name}}
+\index{get\+Action\+Type\+And\+File\+Name@{get\+Action\+Type\+And\+File\+Name}!actions.\+h@{actions.\+h}}
+\subsubsection{\texorpdfstring{get\+Action\+Type\+And\+File\+Name()}{getActionTypeAndFileName()}}
+{\footnotesize\ttfamily struct \hyperlink{struct_action}{Action} get\+Action\+Type\+And\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+pobieramy polecenie z terminala i zwracamy \hyperlink{struct_action}{Action} -\/ czyli typ akcji i nazwę pliku \mbox{\Hypertarget{actions_8h_a72e465fc8fafe02c7c3c015ec2320a36}\label{actions_8h_a72e465fc8fafe02c7c3c015ec2320a36}} 
+\index{actions.\+h@{actions.\+h}!send\+File\+To\+Server@{send\+File\+To\+Server}}
+\index{send\+File\+To\+Server@{send\+File\+To\+Server}!actions.\+h@{actions.\+h}}
+\subsubsection{\texorpdfstring{send\+File\+To\+Server()}{sendFileToServer()}}
+{\footnotesize\ttfamily void send\+File\+To\+Server (\begin{DoxyParamCaption}\item[{S\+SL $\ast$}]{ssl,  }\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+wysyłanie pliku do serwera 
+\begin{DoxyParams}{Parametry}
+{\em ssl} & \\
+\hline
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{actions_8h_ac6101db2192cd8d50ac2d8e30d9712f5}\label{actions_8h_ac6101db2192cd8d50ac2d8e30d9712f5}} 
+\index{actions.\+h@{actions.\+h}!D\+O\+W\+N\+L\+O\+AD@{D\+O\+W\+N\+L\+O\+AD}}
+\index{D\+O\+W\+N\+L\+O\+AD@{D\+O\+W\+N\+L\+O\+AD}!actions.\+h@{actions.\+h}}
+\subsubsection{\texorpdfstring{D\+O\+W\+N\+L\+O\+AD}{DOWNLOAD}}
+{\footnotesize\ttfamily char$\ast$ D\+O\+W\+N\+L\+O\+AD = \char`\"{}download\char`\"{}}
+
+\mbox{\Hypertarget{actions_8h_ae45921aa5bdaa29767e111bf518d91f5}\label{actions_8h_ae45921aa5bdaa29767e111bf518d91f5}} 
+\index{actions.\+h@{actions.\+h}!S\+E\+ND@{S\+E\+ND}}
+\index{S\+E\+ND@{S\+E\+ND}!actions.\+h@{actions.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+ND}{SEND}}
+{\footnotesize\ttfamily char$\ast$ S\+E\+ND = \char`\"{}send\char`\"{}}
+

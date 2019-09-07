@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WIT Safe Transfer: Dokumentacja pliku /home/jgronowski/Dokumenty/Projekty/WITSafeTransfer/server/tcp_openssl/ssl_server.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo-WIT.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WIT Safe Transfer
+   &#160;<span id="projectnumber">ver 1.00</span>
+   </div>
+   <div id="projectbrief">Sylwia Dziedzic, Jaroslaw Gronowski</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_1cdd2d7c2ca08da8ba53fa216348fd5b.html">tcp_openssl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku ssl_server.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>połączenie openssl serwera  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;strings.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;openssl/ssl.h&gt;</code><br />
+<code>#include &lt;openssl/err.h&gt;</code><br />
+<code>#include &lt;openssl/rsa.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="server_2file_2file__utils_8h_source.html">../file/file_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="request__handler_8h_source.html">../request/request_handler.h</a>&quot;</code><br />
+</div>
+<p><a href="ssl__server_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:aac2f81af1e8780a7f43b84b1486d0d41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__server_8h.html#aac2f81af1e8780a7f43b84b1486d0d41">startOpenSSLServer</a> (int port)</td></tr>
+<tr class="separator:aac2f81af1e8780a7f43b84b1486d0d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12cc23f618b9d2c518dca933493d9348"><td class="memItemLeft" align="right" valign="top">SSL_CTX *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__server_8h.html#a12cc23f618b9d2c518dca933493d9348">createSSLServerMethodAndCtx</a> (const SSL_METHOD *sslMethod)</td></tr>
+<tr class="separator:a12cc23f618b9d2c518dca933493d9348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e08e469a0aefb84109e2dbd03c4d007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__server_8h.html#a9e08e469a0aefb84109e2dbd03c4d007">listenAndServe</a> (int serverSocket, SSL_CTX *sslCtx)</td></tr>
+<tr class="separator:a9e08e469a0aefb84109e2dbd03c4d007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:ab35eb3c36c30bc69081c8150faa6aa94"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssl__server_8h.html#ab35eb3c36c30bc69081c8150faa6aa94">SERVER_PORT</a> = 8080</td></tr>
+<tr class="separator:ab35eb3c36c30bc69081c8150faa6aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>połączenie openssl serwera </p>
+<p>tu jest tworzony serwer gdzie określamy metode kryptograficzną, dołączamy certyfikat openssl i czekamy na żądania klienta </p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a12cc23f618b9d2c518dca933493d9348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cc23f618b9d2c518dca933493d9348">&#9670;&nbsp;</a></span>createSSLServerMethodAndCtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSL_CTX * createSSLServerMethodAndCtx </td>
+          <td>(</td>
+          <td class="paramtype">const SSL_METHOD *&#160;</td>
+          <td class="paramname"><em>sslMethod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>tworzenie SSL_METHOD i SSL_CTX </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sslMethod</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e08e469a0aefb84109e2dbd03c4d007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e08e469a0aefb84109e2dbd03c4d007">&#9670;&nbsp;</a></span>listenAndServe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listenAndServe </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>serverSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SSL_CTX *&#160;</td>
+          <td class="paramname"><em>sslCtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>czekanie na żądania klienta i wysyłanie / pobieranie plików </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serverSocket</td><td></td></tr>
+    <tr><td class="paramname">sslCtx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac2f81af1e8780a7f43b84b1486d0d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2f81af1e8780a7f43b84b1486d0d41">&#9670;&nbsp;</a></span>startOpenSSLServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startOpenSSLServer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>utworzenie openssl serwer </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>domyslnie 8080 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja zmiennych</h2>
+<a id="ab35eb3c36c30bc69081c8150faa6aa94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35eb3c36c30bc69081c8150faa6aa94">&#9670;&nbsp;</a></span>SERVER_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SERVER_PORT = 8080</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

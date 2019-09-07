@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WIT Safe Transfer: Dokumentacja pliku /home/jgronowski/Dokumenty/Projekty/WITSafeTransfer/server/file/file_utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo-WIT.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WIT Safe Transfer
+   &#160;<span id="projectnumber">ver 1.00</span>
+   </div>
+   <div id="projectbrief">Sylwia Dziedzic, Jaroslaw Gronowski</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_38f46d963c8a4d604ec28c820493b907.html">file</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku file_utils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>zarządzanie plikami  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;limits.h&gt;</code><br />
+</div>
+<p><a href="server_2file_2file__utils_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a12092741c2e7208e0e30c0650dd7971c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#a12092741c2e7208e0e30c0650dd7971c">getResourcesFilePath</a> (char *fileName)</td></tr>
+<tr class="separator:a12092741c2e7208e0e30c0650dd7971c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4f4586b7cd34bc5c5366d2979909d8"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#a8f4f4586b7cd34bc5c5366d2979909d8">openFileRead</a> (char *fileName)</td></tr>
+<tr class="separator:a8f4f4586b7cd34bc5c5366d2979909d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1e90a63f277bca0f0442a6da7bcb40"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#a8f1e90a63f277bca0f0442a6da7bcb40">getFileBuffToSend</a> (char *fileName)</td></tr>
+<tr class="separator:a8f1e90a63f277bca0f0442a6da7bcb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ed36fc2d6c18847c791e61f3b3a983"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#af7ed36fc2d6c18847c791e61f3b3a983">getFileNameFromRequest</a> (char *request)</td></tr>
+<tr class="separator:af7ed36fc2d6c18847c791e61f3b3a983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2caf3f339ba71129beb18284e4c86816"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#a2caf3f339ba71129beb18284e4c86816">getDownloadFilePath</a> (char *request)</td></tr>
+<tr class="separator:a2caf3f339ba71129beb18284e4c86816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4fb1f2d5b70c3163da6dc1a6ac908f9"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#ac4fb1f2d5b70c3163da6dc1a6ac908f9">openFileWrite</a> (char *fileName)</td></tr>
+<tr class="separator:ac4fb1f2d5b70c3163da6dc1a6ac908f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be3b5854d7583031a87d8338abee79c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2file_2file__utils_8h.html#a0be3b5854d7583031a87d8338abee79c">saveFileFromServer</a> (char *buffer, FILE *file)</td></tr>
+<tr class="separator:a0be3b5854d7583031a87d8338abee79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>zarządzanie plikami </p>
+<p>wszystkie metody tutaj pomagają zarządzać plikami </p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a2caf3f339ba71129beb18284e4c86816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2caf3f339ba71129beb18284e4c86816">&#9670;&nbsp;</a></span>getDownloadFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getDownloadFilePath </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca ścieżkę do pliku z folderu /downloads </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8f1e90a63f277bca0f0442a6da7bcb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f1e90a63f277bca0f0442a6da7bcb40">&#9670;&nbsp;</a></span>getFileBuffToSend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getFileBuffToSend </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca plik do wysłania </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af7ed36fc2d6c18847c791e61f3b3a983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ed36fc2d6c18847c791e61f3b3a983">&#9670;&nbsp;</a></span>getFileNameFromRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getFileNameFromRequest </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca nazwę pliku z żądania </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12092741c2e7208e0e30c0650dd7971c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12092741c2e7208e0e30c0650dd7971c">&#9670;&nbsp;</a></span>getResourcesFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getResourcesFilePath </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca ścieżkę do pliku z folderu /resources </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8f4f4586b7cd34bc5c5366d2979909d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f4f4586b7cd34bc5c5366d2979909d8">&#9670;&nbsp;</a></span>openFileRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* openFileRead </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>otwiera plik do pisania </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac4fb1f2d5b70c3163da6dc1a6ac908f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4fb1f2d5b70c3163da6dc1a6ac908f9">&#9670;&nbsp;</a></span>openFileWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* openFileWrite </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>otwiera plik do czytania </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0be3b5854d7583031a87d8338abee79c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be3b5854d7583031a87d8338abee79c">&#9670;&nbsp;</a></span>saveFileFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saveFileFromServer </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zapisuje plik z serwera </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
