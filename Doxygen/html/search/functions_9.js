@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['savefilefromserver',['saveFileFromServer',['../client_2file_2file__utils_8h.html#a0be3b5854d7583031a87d8338abee79c',1,'saveFileFromServer(char *buffer, FILE *file):&#160;file_utils.h'],['../server_2file_2file__utils_8h.html#a0be3b5854d7583031a87d8338abee79c',1,'saveFileFromServer(char *buffer, FILE *file):&#160;file_utils.h']]],
+  ['savefilefromclient',['saveFileFromClient',['../server_2file_2file__utils_8h.html#ae500610849d72f97881ff80f90fe6382',1,'file_utils.h']]],
+  ['savefilefromserver',['saveFileFromServer',['../client_2file_2file__utils_8h.html#a0be3b5854d7583031a87d8338abee79c',1,'file_utils.h']]],
   ['sendfiletoclient',['sendFileToClient',['../request__handler_8h.html#a4d593cce689467f33c237f5a66bf26a8',1,'request_handler.h']]],
   ['sendfiletoserver',['sendFileToServer',['../actions_8h.html#a72e465fc8fafe02c7c3c015ec2320a36',1,'actions.h']]],
   ['startclient',['startClient',['../ssl__client_8h.html#a61a468f03fa158a6334c696942cd6aa0',1,'ssl_client.h']]],
