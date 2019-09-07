@@ -1,1 +1,0 @@
-This is example file to download from server.
